@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400);
+
+body {
+  background: #f8f8f8;
+  font-family: Karla, sans-serif;
+}
+
+.wrapper {
+  width: 250px;
+  height: 310px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -155px 0 0 -125px;
+  text-align: center;
+}
+
+.dtmf-interface {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dtmf-interface li {
+  float: left;
+  margin: 10px;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 24px;
+  border: solid 1px #333;
+  border-radius: 3px;
+  padding: 15px;
+  transition: all 0.5s;
+}
+
+.dtmf-interface li:hover {
+  color: #3cd9fd;
+  border-color: #3cd9fd;
+  transition-duration: 0s;
+  cursor: pointer;
+}
+
+.dtmf-interface li:active {
+  color: #f60;
+  border-color: #f60;
+  transition-duration: 0s;
+}
+
+.button {
+  font-size: 24px;
+  border: solid 1px #333;
+  width: 200px;
+  border-radius: 3px;
+  padding: 15px;
+  transition: all 0.5s;
+  margin: 0 auto 40px;
+}
+
+.button:hover {
+  color: #3f9dd4;
+  border-color: #3f9dd4;
+  transition-duration: 0s;
+  cursor: pointer;
+}
