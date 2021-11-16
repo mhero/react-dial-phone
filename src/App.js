@@ -2,28 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import Key from "./Key";
 import Tone from "./Tone";
-
-const dtmfFrequencies = {
-  1: { f1: 697, f2: 1209 },
-  2: { f1: 697, f2: 1336 },
-  3: { f1: 697, f2: 1477 },
-  4: { f1: 770, f2: 1209 },
-  5: { f1: 770, f2: 1336 },
-  6: { f1: 770, f2: 1477 },
-  7: { f1: 852, f2: 1209 },
-  8: { f1: 852, f2: 1336 },
-  9: { f1: 852, f2: 1477 },
-  "*": { f1: 941, f2: 1209 },
-  0: { f1: 941, f2: 1336 },
-  "#": { f1: 941, f2: 1477 },
-};
+import { DTMF_FREQUENCIES } from "./Frecuencies";
 
 let dtmf = new Tone(350, 440);
 let ringTone = new Tone(400, 450);
 
 class App extends Component {
   handleClick(key) {
-    let frequencyPair = dtmfFrequencies[key];
+    let frequencyPair = DTMF_FREQUENCIES[key];
     dtmf.freq1 = frequencyPair.f1;
     dtmf.freq2 = frequencyPair.f2;
 
