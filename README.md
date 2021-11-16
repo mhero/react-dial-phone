@@ -1,8 +1,8 @@
 
 # react-dial-phone
 
-Experiment to produce phone sounds using [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
-All key will produce a sound similar to a phone,  including the ring tone
+- Experiment to produce phone sounds using [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
+- Every key will produce a sound similar to a phone, including the ring tone
 
 Install: 
 ```
