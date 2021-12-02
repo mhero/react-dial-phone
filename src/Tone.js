@@ -13,7 +13,6 @@ export default class Tone {
     this.gainNode = null;
     this.filter = null;
     this.ringerLFOBuffer = null;
-    this.status = 0;
   }
 
   setup() {
