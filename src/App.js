@@ -19,17 +19,13 @@ class App extends Component {
   }
 
   handleRelease() {
-    if (typeof dtmf !== "undefined" && dtmf.status) {
+    if (dtmf?.status) {
       dtmf.stop();
     }
   }
 
   handleRing() {
-    if (ringTone.status === 0) {
-      ringTone.startRinging();
-    } else {
-      ringTone.stopRinging();
-    }
+    ringTone.status === 0 ? ringTone.startRinging() : ringTone.stopRinging();
   }
 
   renderKey(key) {
@@ -43,24 +39,15 @@ class App extends Component {
   }
 
   render() {
+    const keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'];
+    
     return (
       <div className="App">
         <div className="wrapper">
           <ul className="dtmf-interface js-dtmf-interface">
-            {this.renderKey(1)}
-            {this.renderKey(2)}
-            {this.renderKey(3)}
-            {this.renderKey(4)}
-            {this.renderKey(5)}
-            {this.renderKey(6)}
-            {this.renderKey(7)}
-            {this.renderKey(8)}
-            {this.renderKey(9)}
-            {this.renderKey("*")}
-            {this.renderKey(0)}
-            {this.renderKey("#")}
+            {keys.map((key) => this.renderKey(key))}
           </ul>
-          <div className="button" onClick={() => this.handleRing()}>
+          <div className="button" onClick={this.handleRing}>
             Ring Tone
           </div>
         </div>
